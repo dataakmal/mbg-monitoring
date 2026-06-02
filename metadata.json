@@ -1,0 +1,6 @@
+{
+  "name": "MBG Dashboard",
+  "description": "Dashboard Monitoring Makan Bergizi Gratis (MBG) Nasional - Sistem Manajemen Data Sekolah, Menu Nutrisi, dan Distribusi Porsi Makanan Sehat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
