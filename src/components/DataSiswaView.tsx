@@ -112,7 +112,7 @@ export default function DataSiswaView({ sekolahList }: DataSiswaViewProps) {
             <div className="relative flex items-center justify-center">
               <svg className="w-16 h-16 transform -rotate-90">
                 <circle cx="32" cy="32" r="26" stroke="#1e293b" strokeWidth="4" fill="transparent" />
-                <circle cx="32" cy="32" r="26" stroke="#10b981" strokeWidth="5" fill="transparent" 
+                <circle cx="32" cy="32" r="26" stroke="#2596be" strokeWidth="5" fill="transparent" 
                   strokeDasharray={163.3}
                   strokeDashoffset={163.3 - (163.3 * progressRatio) / 100}
                 />

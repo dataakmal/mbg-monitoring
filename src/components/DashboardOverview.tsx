@@ -455,7 +455,7 @@ export default function DashboardOverview({
                 <div className="relative flex items-center justify-center my-3">
                   <svg className="w-24 h-24 transform -rotate-90">
                     <circle cx="48" cy="48" r="40" stroke="#f3f4f6" strokeWidth="6" fill="transparent" />
-                    <circle cx="48" cy="48" r="40" stroke="#10b981" strokeWidth="8" fill="transparent" 
+                    <circle cx="48" cy="48" r="40" stroke="#2596be" strokeWidth="8" fill="transparent" 
                       strokeDasharray={251.2}
                       strokeDashoffset={251.2 - (251.2 * 94) / 100}
                     />

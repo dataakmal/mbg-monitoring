@@ -229,8 +229,8 @@ export default function MonitoringGiziView({
               <defs>
                 {/* Gradient for area fill under path */}
                 <linearGradient id="calorieGlow" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#10b981" stopOpacity="0.25" />
-                  <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#2596be" stopOpacity="0.25" />
+                  <stop offset="100%" stopColor="#2596be" stopOpacity="0" />
                 </linearGradient>
               </defs>
 
@@ -260,7 +260,7 @@ export default function MonitoringGiziView({
               {dArea && <path d={dArea} fill="url(#calorieGlow)" />}
 
               {/* Spline pathway line */}
-              {dBezier && <path d={dBezier} fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" className="glow-emerald" />}
+              {dBezier && <path d={dBezier} fill="none" stroke="#2596be" strokeWidth="3" strokeLinecap="round" className="glow-emerald" />}
 
               {/* Custom dots interactive triggers */}
               {coords.map((pt, idx) => {
@@ -272,7 +272,7 @@ export default function MonitoringGiziView({
                       cx={pt.x} 
                       cy={pt.y} 
                       r={isHovered ? 10 : 0} 
-                      fill="#10b981" 
+                      fill="#2596be" 
                       opacity="0.25"
                       className="transition-all duration-150"
                     />
@@ -281,7 +281,7 @@ export default function MonitoringGiziView({
                       cy={pt.y} 
                       r={isHovered ? 6 : 4} 
                       fill="#ffffff" 
-                      stroke="#10b981" 
+                      stroke="#2596be" 
                       strokeWidth={3}
                       className="cursor-pointer transition-all duration-150"
                       onMouseEnter={() => setHoveredNode(idx)}

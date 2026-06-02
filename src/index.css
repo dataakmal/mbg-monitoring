@@ -7,23 +7,55 @@
   --font-mono: "JetBrains Mono", monospace;
   
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  /* Custom Brand Colors conforming to User Request: #2596be, #d0af6b, #071e48 */
+  --color-brand-blue: #2596be;
+  --color-brand-gold: #d0af6b;
+  --color-brand-navy: #071e48;
+
+  /* Dynamically re-mapping Emerald to Brand Blue so existing code uses BGN color tone */
+  --color-emerald-25: #f4fafc;
+  --color-emerald-50: #eaf5f9;
+  --color-emerald-100: #d3ebf4;
+  --color-emerald-200: #a7d7e9;
+  --color-emerald-300: #7cbdde;
+  --color-emerald-400: #51a3cf;
+  --color-emerald-500: #2596be;
+  --color-emerald-600: #1d7898;
+  --color-emerald-700: #145b74;
+  --color-emerald-800: #0a3d4f;
+  --color-emerald-900: #071e48;
+
+  /* Re-mapping Slate-900 and Slate-950 to Brand Navy to render the dark headers & sidebars in government navy blue */
+  --color-slate-910: #0d2a5c;
+  --color-slate-900: #071e48;
+  --color-slate-950: #04122d;
+
+  /* Re-mapping gold-themed elements (amber) to brand gold */
+  --color-amber-25: #fcfbfa;
+  --color-amber-50: #fbf8f0;
+  --color-amber-100: #f6edd6;
+  --color-amber-500: #d0af6b;
+  --color-amber-600: #a68c55;
+  --color-amber-700: #7d6940;
+  --color-amber-800: #53462b;
 }
 
 /* Custom styles for government glow and premium widgets */
 .gov-card-glow {
-  box-shadow: 0 4px 20px -2px rgba(16, 185, 129, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(37, 150, 190, 0.08);
 }
 
 .glow-blue {
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 15px rgba(37, 150, 190, 0.4);
 }
 
 .glow-emerald {
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 15px rgba(37, 150, 190, 0.4);
 }
 
 .glow-amber {
-  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 15px rgba(208, 175, 107, 0.4);
 }
 
 .glow-rose {

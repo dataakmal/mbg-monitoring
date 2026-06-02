@@ -220,16 +220,19 @@ export default function App() {
         {/* Brand header */}
         <div className="h-16 flex items-center justify-between px-4 border-b border-slate-950">
           <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="w-9 h-9 min-w-9 bg-[#10b981] text-slate-900 rounded-xl flex items-center justify-center font-black text-lg shadow-[0_0_15px_rgba(16,185,129,0.4)]">
-              M
-            </div>
+            <img 
+              src="/assets/public/logo-bgn.png" 
+              alt="Logo BGN" 
+              className="w-10 h-10 min-w-10 object-contain drop-shadow-[0_0_8px_rgba(37,150,190,0.3)]"
+              referrerPolicy="no-referrer"
+            />
             {!isSidebarCollapsed && (
               <div>
                 <h1 className="font-extrabold text-sm text-white font-display tracking-tight leading-none">
                   MBG Dashboard
                 </h1>
-                <span className="text-[9.5px] font-bold text-emerald-400 tracking-widest uppercase leading-none mt-1 block">
-                  Pusat Nasional
+                <span className="text-[9px] font-extrabold text-amber-500 tracking-wider uppercase leading-none mt-1 block">
+                  Badan Gizi Nasional
                 </span>
               </div>
             )}
@@ -258,7 +261,7 @@ export default function App() {
                 }}
                 className={`w-full flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all duration-150 cursor-pointer ${
                   isActive 
-                    ? 'bg-[#10b981]/15 text-emerald-300 border-l-4 border-emerald-500 font-extrabold shadow-sm'
+                    ? 'bg-emerald-500/15 text-emerald-300 border-l-4 border-emerald-500 font-extrabold shadow-sm'
                     : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'
                 }`}
               >
@@ -286,9 +289,12 @@ export default function App() {
       {/* 2. MOBILE HEADER & NAVIGATION DRAWER */}
       <div className="md:hidden print:hidden fixed top-0 left-0 right-0 h-14 bg-slate-900 border-b border-slate-950 flex items-center justify-between px-4 z-40 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-emerald-500 text-slate-950 font-black rounded-lg flex items-center justify-center">
-            M
-          </div>
+          <img 
+            src="/assets/public/logo-bgn.png" 
+            alt="Logo BGN" 
+            className="w-8 h-8 object-contain"
+            referrerPolicy="no-referrer"
+          />
           <span className="font-bold font-display text-sm">MBG Dashboard</span>
         </div>
 
@@ -363,7 +369,7 @@ export default function App() {
 
           <div className="flex items-center gap-3 text-xs font-bold">
             <span className="text-slate-400">Operator Akun:</span>
-            <span className="text-[#10b981] bg-emerald-55/40 border border-emerald-100 px-2 py-0.5 rounded">
+            <span className="text-emerald-600 bg-emerald-50/60 border border-emerald-100 px-2 py-1 rounded-lg">
               Akmalfauzan2910@gmail.com
             </span>
           </div>
