@@ -5,6 +5,16 @@ import {
   Search, ArrowDownToLine, RefreshCw, Layers, Sparkles, X
 } from 'lucide-react';
 
+const getFormattedCurrentTime = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  const hours = String(d.getHours()).padStart(2, '0');
+  const minutes = String(d.getMinutes()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}`;
+};
+
 interface StokBahanViewProps {
   stokList: StokBahan[];
   onAddStock: (idBahan: string, amountKg: number) => void;
@@ -71,7 +81,7 @@ export default function StokBahanView({
       min_stok_kg: newIngMin,
       satuan: newIngUnit,
       status: calculatedStatus,
-      terakhir_diperbarui: '2026-06-02 09:00'
+      terakhir_diperbarui: getFormattedCurrentTime()
     };
 
     onAddNewIngredient(newIng);

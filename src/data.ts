@@ -211,5 +211,5 @@ export const initialSettings: DashboardSettings = {
   targetProteinMax: 40,
   porsiPriceLimit: 17500,
   namaMenteri: 'Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan',
-  wilayahKerja: 'Nasional Republik Indonesia'
+  wilayahKerja: 'Dashboard Monitoring MBG (Demo) Created by Akmal Fauzan'
 };

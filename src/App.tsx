@@ -26,11 +26,46 @@ import {
   Menu, X, ChevronLeft, ChevronRight, User, Clock, ShieldCheck
 } from 'lucide-react';
 
+const getFormattedCurrentTime = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  const hours = String(d.getHours()).padStart(2, '0');
+  const minutes = String(d.getMinutes()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}`;
+};
+
 export default function App() {
   // Navigation & UI controls
   const [activeTab, setActiveTab] = useState('Dashboard');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Real-time clock state
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const clockInterval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(clockInterval);
+  }, []);
+
+  const formatLiveClock = (date: Date) => {
+    const months = [
+      'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+      'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+    ];
+    const dayName = String(date.getDate()).padStart(2, '0');
+    const monthName = months[date.getMonth()];
+    const yearName = date.getFullYear();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+
+    return `${dayName} ${monthName} ${yearName}, ${hours}:${minutes}:${seconds} WIB`;
+  };
 
   // Core Global States
   const [sekolahList, setSekolahList] = useState<Sekolah[]>(initialSekolah);
@@ -101,7 +136,7 @@ export default function App() {
           ...item,
           stok_kg: nextQty,
           status: nextStatus,
-          terakhir_diperbarui: '2026-06-02 09:12'
+          terakhir_diperbarui: getFormattedCurrentTime()
         };
       }
       return item;
@@ -355,15 +390,15 @@ export default function App() {
         <header className="h-16 bg-white border-b border-gray-100 px-6 hidden sm:flex items-center justify-between shadow-xs print:hidden">
           <div className="flex items-center gap-6 text-xs text-slate-500 font-medium select-none">
             {/* Jurisdiction Badge */}
-            <span className="bg-slate-100 text-slate-800 font-bold px-2.5 py-1 rounded-md uppercase tracking-wider font-mono flex items-center gap-1">
-              <ShieldCheck size={13} className="text-slate-500" />
-              YURISDIKSI: {settings.wilayahKerja.toUpperCase()}
+            <span className="bg-slate-100 text-slate-800 font-bold px-2.5 py-1 rounded-md tracking-wider font-mono flex items-center gap-1">
+              <ShieldCheck size={13} className="text-emerald-600" />
+              {settings.wilayahKerja}
             </span>
 
             {/* Simulated Live status and date */}
             <span className="flex items-center gap-1 font-mono font-bold text-slate-500">
-              <Clock size={13} /> 
-              02 Juni 2026, 09:05 WIB
+              <Clock size={13} className="text-emerald-600 animate-pulse" /> 
+              {formatLiveClock(currentTime)}
             </span>
           </div>
 
