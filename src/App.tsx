@@ -221,7 +221,7 @@ export default function App() {
         <div className="h-16 flex items-center justify-between px-4 border-b border-slate-950">
           <div className="flex items-center gap-2.5 overflow-hidden">
             <img 
-              src="/assets/public/logo-bgn.png" 
+              src="/logo-bgn.png" 
               alt="Logo BGN" 
               className="w-10 h-10 min-w-10 object-contain drop-shadow-[0_0_8px_rgba(37,150,190,0.3)]"
               referrerPolicy="no-referrer"
@@ -290,7 +290,7 @@ export default function App() {
       <div className="md:hidden print:hidden fixed top-0 left-0 right-0 h-14 bg-slate-900 border-b border-slate-950 flex items-center justify-between px-4 z-40 text-white">
         <div className="flex items-center gap-2">
           <img 
-            src="/assets/public/logo-bgn.png" 
+            src="/logo-bgn.png" 
             alt="Logo BGN" 
             className="w-8 h-8 object-contain"
             referrerPolicy="no-referrer"
